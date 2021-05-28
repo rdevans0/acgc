@@ -99,39 +99,6 @@ class ResNet(chainer.Chain, VarTracking):
         h = reg('final1-c', self.fc6(h))
         return h
     
-    # @property
-    # def act_names(self):
-    #     if hasattr(self, '_activations_cached'):
-    #         return self._activations_cached
-        
-    #     x = self.xp.random.randn(1, 3, 32, 32).astype('f')
-    #     loss = self(x)
-    #     variables = [loss] + [ v for _,_,v in backward_var_iter_nodup(loss)]
-        
-    #     # Remove duplicates from bottom
-    #     a = [v.name for v in variables if v.data is not None]
-    #     nodup = sorted(list(set(a)), key=list(reversed(a)).index, reverse=1)
-    #     self._activations_cached = nodup
-    #     return self._activations_cached
-    
-    # def act_shapes(self):
-    #     x = self.xp.random.randn(1, 3, 32, 32).astype('f')
-    #     loss = self(x)
-    #     variables = [loss] + [ v for _,_,v in backward_var_iter_nodup(loss)]
-        
-    #     # Remove duplicates from bottom
-    #     a = [v.name for v in variables if v.data is not None]
-    #     shape_map = dict((v.name,v.shape) for v in variables if v.data is not None)
-    #     nodup = sorted(list(set(a)), key=list(reversed(a)).index, reverse=1)
-    #     total = 0
-    #     shapes = []
-    #     for name in nodup:
-    #         shape = shape_map[name]
-    #         shapes += [(name, shape)]
-    #         total += np.prod(shape)
-        
-    #     return shapes, total
-    
     def namedvars(self):
         return self.custom_namedvars(['block','children','final'])
     
