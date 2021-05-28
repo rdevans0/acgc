@@ -22,12 +22,12 @@ cd acgc
 
 # Code layout
 
-Modifications to the training loop are in [acgc/common/compression/grad_approx.py](acgc/common/compression/compressed_momentum_sgd.py).
+Modifications to the training loop are in [acgc/common/compression/compressed_momentum_sgd.py](acgc/common/compression/compressed_momentum_sgd.py).
 
-The AutoQuant implementation, and error bound calculation is in [acgc/common/compression/grad_approx.py](acgc/common/compression/autoquant.py).
+The AutoQuant implementation, and error bound calculation is in [acgc/common/compression/autoquant.py](acgc/common/compression/autoquant.py).
 
 Gradient and parameter estimation is performed in [acgc/common/compression/grad_approx.py](acgc/common/compression/grad_approx.py)
 
 # Results
 
-We have added example results for each configuration under [acgc/common/compression/grad_approx.py](acgc/results).
+We have added example results for each configuration under [acgc/results](acgc/results).
