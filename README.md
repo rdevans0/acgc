@@ -2,7 +2,7 @@
 
 # Setup
 This code is tested on Ubuntu 20.04 with Python 3 and CUDA 10.1. 
-Other cuda versions can be used by modifying the cupy version in [](requirements.txt), provided that CuDNN is installed.
+Other cuda versions can be used by modifying the cupy version in [requirements.txt](requirements.txt), provided that CuDNN is installed.
 
 ```bash
 # Set up environment
@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 ```
 
 # Running
-Configurations are provided for CIFAR10/ResNet50 in the [](acgc/configs) folder. 
+Configurations are provided for CIFAR10/ResNet50 in the [acgc/configs](acgc/configs) folder. 
 
 ```bash
 source venv/bin/activate
@@ -22,12 +22,12 @@ cd acgc
 
 # Code layout
 
-Modifications to the training loop are in [](acgc/common/compression/compressed_momentum_sgd.py).
+Modifications to the training loop are in [acgc/common/compression/grad_approx.py](acgc/common/compression/compressed_momentum_sgd.py).
 
-The AutoQuant implementation, and error bound calculation is in [](acgc/common/compression/autoquant.py).
+The AutoQuant implementation, and error bound calculation is in [acgc/common/compression/grad_approx.py](acgc/common/compression/autoquant.py).
 
-Gradient and parameter estimation is performed in [](acgc/common/compression/grad_approx.py)
+Gradient and parameter estimation is performed in [acgc/common/compression/grad_approx.py](acgc/common/compression/grad_approx.py)
 
 # Results
 
-We have added example results for each configuration under [](acgc/results).
+We have added example results for each configuration under [acgc/common/compression/grad_approx.py](acgc/results).
