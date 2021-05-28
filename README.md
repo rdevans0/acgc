@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 ```
 
 # Running
-Configurations are provided for CIFAR10/ResNet50 in the [acgc/configs](acgc/configs) folder. 
+Configurations are provided for CIFAR10/ResNet50 in the acgc/configs folder. 
 
 ```bash
 source venv/bin/activate
@@ -22,7 +22,7 @@ cd acgc
 
 # Code layout
 
-Argument parsing and model initialization are handled in [cifar.py](cifar.py) and [train_cifar_error.py](train_cifar_error.py)
+Argument parsing and model initialization are handled in [acgc/cifar.py](acgc/cifar.py) and [acgc/train_cifar_error.py](acgc/train_cifar_error.py)
 
 Modifications to the training loop are in [acgc/common/compression/compressed_momentum_sgd.py](acgc/common/compression/compressed_momentum_sgd.py).
 
@@ -34,4 +34,4 @@ Gradient and parameter estimation is performed in [acgc/common/compression/grad_
 
 # Results
 
-We have added example results for each configuration under [acgc/results](acgc/results).
+We have added example results for each configuration under acgc/results.
