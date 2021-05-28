@@ -1,0 +1,12 @@
+wheel
+numpy==1.19.4
+matplotlib==3.3.3
+scikit-image==0.18.0
+scipy==1.5.4
+cupy-cuda101==6.6.0
+chainer==6.3.0
+chainercv==0.13.1
+opencv-python==4.4.0.46
+tqdm
+future==0.18.2
+
