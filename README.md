@@ -22,7 +22,11 @@ cd acgc
 
 # Code layout
 
+Argument parsing and model initialization are handled in [cifar.py](cifar.py) and [train_cifar_error.py](train_cifar_error.py)
+
 Modifications to the training loop are in [acgc/common/compression/compressed_momentum_sgd.py](acgc/common/compression/compressed_momentum_sgd.py).
+
+The baseline fixpoint implementation is in [acgc/common/compression/quant.py](acgc/common/compression/quant.py).
 
 The AutoQuant implementation, and error bound calculation is in [acgc/common/compression/autoquant.py](acgc/common/compression/autoquant.py).
 
