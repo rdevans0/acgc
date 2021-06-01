@@ -51,7 +51,7 @@ We have added example results for each configuration under acgc/results.
 | rn50_autoquantz  |  94.91 %          |  6.694       | 300    |
 
 ## Code layout
-Argument parsing and model initialization are handled in [acgc/cifar.py](acgc/cifar.py) and [acgc/train_cifar_error.py](acgc/train_cifar_act_error.py)
+Argument parsing and model initialization are handled in [acgc/cifar.py](acgc/cifar.py) and [acgc/train_cifar_act_error.py](acgc/train_cifar_act_error.py)
 
 Modifications to the training loop are in [acgc/common/compression/compressed_momentum_sgd.py](acgc/common/compression/compressed_momentum_sgd.py).
 
