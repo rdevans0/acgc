@@ -11,7 +11,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-# Running
+# Training
 Configurations are provided for CIFAR10/ResNet50 in the acgc/configs folder. 
 
 ```bash
@@ -20,9 +20,27 @@ cd acgc
 ./configs/rn50_baseline.sh
 ```
 
+To replicate GridQuantZ results from the paper:
+* Run quantz with bitwidths of 2, 4, 6, 8, 10, 12, 14, and 16 bits
+* Select the result with the lowest bitwidth and accuracy no less than the baseline - 0.1%
+
+# Inference
+Inference with the validation dataset is run during training. 
+
+# Results
+We have added example results for each configuration under acgc/results.
+
+| Configuration    | Best Val. Acc     | Average Bits | Epochs |
+|------------------|:-----------------:|:------------:|:------:|
+| rn50_autoquant   |  94.73 %          |  7.305       | 300    |
+| rn50_autoquantz  |  94.91 %          |  6.694       | 300    |
+| rn50_baseline    |  95.16 %          |  N/A         | 300    |
+| rn50_quant_8bit  |  94.90 %          |  8.000       | 300    |
+| rn50_quantz_8bit |  94.82 %          |  7.426       | 300    |
+
 # Code layout
 
-Argument parsing and model initialization are handled in [acgc/cifar.py](acgc/cifar.py) and [acgc/train_cifar_error.py](acgc/train_cifar_error.py)
+Argument parsing and model initialization are handled in [acgc/cifar.py](acgc/cifar.py) and [acgc/train_cifar_error.py](acgc/train_cifar_act_error.py)
 
 Modifications to the training loop are in [acgc/common/compression/compressed_momentum_sgd.py](acgc/common/compression/compressed_momentum_sgd.py).
 
@@ -32,6 +50,4 @@ The AutoQuant implementation, and error bound calculation is in [acgc/common/com
 
 Gradient and parameter estimation is performed in [acgc/common/compression/grad_approx.py](acgc/common/compression/grad_approx.py)
 
-# Results
 
-We have added example results for each configuration under acgc/results.
