@@ -1,4 +1,4 @@
-# Code AC-GC: Lossy Activation Compression with Guaranteed Convergence
+# Code For AC-GC: Lossy Activation Compression with Guaranteed Convergence
 This code is intended to be used as a supplemental material for submittion to NeurIPS 2021.
 
 **DO NOT DISTRIBUTE**
@@ -57,8 +57,8 @@ Modifications to the training loop are in [acgc/common/compression/compressed_mo
 
 The baseline fixpoint implementation is in [acgc/common/compression/quant.py](acgc/common/compression/quant.py).
 
-The AutoQuant implementation, and error bound calculation is in [acgc/common/compression/autoquant.py](acgc/common/compression/autoquant.py).
+The AutoQuant implementation, and error bound calculation are in [acgc/common/compression/autoquant.py](acgc/common/compression/autoquant.py).
 
-Gradient and parameter estimation is performed in [acgc/common/compression/grad_approx.py](acgc/common/compression/grad_approx.py)
+Gradient and parameter estimation are performed in [acgc/common/compression/grad_approx.py](acgc/common/compression/grad_approx.py)
 
 
