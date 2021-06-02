@@ -1,5 +1,5 @@
 # Code For AC-GC: Lossy Activation Compression with Guaranteed Convergence
-This code is intended to be used as a supplemental material for submittion to NeurIPS 2021.
+This code is intended to be used as a supplemental material for submission to NeurIPS 2021.
 
 **DO NOT DISTRIBUTE**
 
