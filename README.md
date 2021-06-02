@@ -50,7 +50,7 @@ We have added reports and logs for each configuration under acgc/results. The lo
 
 A summarized output from these runs is:
 
-| Configuration    | Best Val. Acc     | Average Bits | Epochs |
+| Configuration    | Best Test Acc     | Average Bits | Epochs |
 |------------------|:-----------------:|:------------:|:------:|
 | rn50_baseline    |  95.16 %          |  N/A         | 300    |
 | rn50_quant_8bit  |  94.90 %          |  8.000       | 300    |
